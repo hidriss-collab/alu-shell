@@ -1,2 +1,2 @@
-#!/bin/bash
-echo $(($((5#$(echo $WATER | tr water 01234))) + $((5#$(echo $STIR | tr stir. 1234))))) | tr 0123456789 behlnorst
+cd /alu-shell/init_files_variables_and_expansions
+nano 17-water_and_stir
