@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "obase=8;$(( $(echo "obase=10;ibase=5;$(echo $WATER | tr 'water' '01234')" | bc) + $(echo "obase=10;ibase=4;$(echo $STIR | tr 'stir' '0123' | tr -d '.')" | bc) ))" | bc | tr '01234567' 'bestchol'
+echo $(($((5#$(echo $WATER | tr water 01234))) + $((5#$(echo $STIR | tr stir. 1234))))) | tr 0123456789 behlnorst
