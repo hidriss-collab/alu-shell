@@ -1,2 +1,7 @@
 #!/bin/bash
-find . -type f -name "*.gif" | rev | cut -c5- | rev | cut -d/ -f2 | sort -f
+find . -type f | tr '/' '\n' | sort -f | while read f
+do
+case "$f" in
+*.gif) echo "${f%.gif}" ;;
+esac
+done
